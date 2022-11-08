@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "category": "Full Stack"
+    },
+    {
+        "id": 2,
+        "category": "Machine Learning"
+    },
+    {
+        "id": 3,
+        "category": "Big Data"
+    },
+    {
+        "id": 4,
+        "category": "Cloud"
+    },
+    {
+        "id": 5,
+        "category": "DevOps"
+    },
+    {
+        "id": 6,
+        "category": "Blockchain"
+    }
+]

@@ -1,0 +1,46 @@
+<div class="row">
+    <section class="main col-md-9">
+        {{#if data.product}}
+            <article>
+                <h2>{{data.product.title}}</h2>
+                <img src={{data.product.featureImage}} width="847" height="320" />
+                <br /><br />
+                {{#safeHTML data.product.body}}{{/safeHTML}}
+                <br /><br />
+                <strong>Category:</strong> {{data.product.category}}<br />
+                <strong>Last Updated:</strong> {{data.product.postDate}}
+
+            </article>
+            {{else}}
+            <div class="col-md-12 text-center">
+                <h2>{{data.message}}</h2>
+                <p>Please try another Product / Category</p>
+            </div>
+
+        {{/if}}
+    </section>
+    <aside class="col-md-3">
+        <br /><br />
+        {{#if data.products}}
+        <h4>Products</h4>
+
+            <ul class="list-group">
+                {{#each data.products}}
+                    <a href="/products/{{this.id}}?category={{../viewingCategory}}" class="list-group-item">{{this.title}}</a>
+                {{/each}}
+            </ul>
+
+        {{/if}}
+
+        {{#if data.categories}}
+        <h4>Categories</h4>
+
+            <ul class="list-group">
+                {{#each data.categories}}
+                    <a href="/products?category={{this.id}}" class="list-group-item">{{this.category}}</a>
+                {{/each}}
+            </ul>
+
+        {{/if}}
+    </aside>
+</div>
